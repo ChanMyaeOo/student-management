@@ -12,3 +12,20 @@
   height: 85vh;
   background-color: aliceblue;
 }
+
+table,
+th,
+tr,
+td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+}
+
+.table__header {
+  /* background: grey; */
+  height: 40px;
+}
