@@ -1,10 +1,15 @@
 import React from 'react';
 import './showcase.css';
+import { useSelector } from 'react-redux';
+import Student from '../student/Student';
 
 const Showcase = () => {
-    const student = true;
-
-    if(student) {
+    const students = useSelector(state => state.students)
+    
+    // const students = null;
+    console.log(students)
+    
+    if(students) {
         return <div className="showcase__list">
             <h1>Student List</h1>
             <table className="table">
@@ -14,26 +19,9 @@ const Showcase = () => {
                     <th>Parent</th>  
                     <th>Address</th>
                 </tr>
-                <tr>
-                    <td>Kyaw Kyaw</td>
-                    <td>09976754676</td>
-                    <td>U Hla Myint</td>
-                    <td>Aung Mingalar</td>
-                </tr>
-
-                 <tr>
-                    <td>Kyaw Kyaw</td>
-                    <td>09976754676</td>
-                    <td>U Hla Myint</td>
-                    <td>Aung Mingalar</td>
-                </tr>
-
-                 <tr>
-                    <td>Kyaw Kyaw</td>
-                    <td>09976754676</td>
-                    <td>U Hla Myint</td>
-                    <td>Aung Mingalar</td>
-                </tr>
+                {
+                    students.map(student => <Student student={student} key={student.id} />)
+                }
             </table>
         </div>
     }

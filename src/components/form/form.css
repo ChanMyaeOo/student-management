@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background: #191440;
+  padding: 40px;
+  position: relative;
+  border-radius: 3px;
+}
+
+.form h3 {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.form-input,
+.form-textarea,
+.form-button {
+  height: 30px;
+  padding: 5px;
+  margin: 2px;
+}
+
+.form-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: orangered;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.form-close:hover {
+  color: white;
+}
